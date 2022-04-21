@@ -20,7 +20,7 @@
                 </div>
             </div>
             
-            <div class="thumbnails">
+            <div class="thumbnails" @mouseenter="stop"  @mouseleave="autoplay" >
                 <div class="navigator">
                     <div class="up" @click="prevImg">
                         <i class="fa-solid fa-chevron-up "></i>
@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <img :src="thumb.image"  class="thumb " :class="activeImage === index ? 'active' : ''" alt="" 
-                v-for ="(thumb, index) in galleria" @click="selectImg(index)" >
+                v-for ="(thumb, index) in galleria" @click="selectImg(index)"  >
                 
             </div>
             

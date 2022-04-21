@@ -58,9 +58,21 @@ const app  = new Vue ({
            this.activeImage = index
            console.log("cannuccia")
         },
+
+        autoplay(){
+            this.timer = setInterval(this.nextImg, 3000)
+        },
+
+        stop(){
+            clearInterval(this.timer)
+        }
         
         
-    }
+        
+    },
    
+    mounted(){
+        this.autoplay()
+    }
 
 })
