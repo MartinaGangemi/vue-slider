@@ -15,18 +15,19 @@
             <div class="img_container">
                 <img :src="galleria[activeImage].image" alt="">
                 <div class="text">
-                    
+                    <h2>{{galleria[activeImage].title}}</h2>
+                    <p>{{ galleria[activeImage].text}}</p>
                 </div>
             </div>
             <div class="thumbnails">
-                <img :src="thumb"  class="thumb" alt="" v-for ="(thumb, index) in galleria[index].image" >
+                <img :src="thumb.image"  class="thumb" alt="" v-for ="thumb in galleria" >
         
             </div>
              <div class="navigator">
-                <div class="up">
+                <div class="up" @click="prevImg">
                     <i class="fa-solid fa-chevron-up "></i>
                 </div>
-                <div class="down">
+                <div class="down" @click="nextImg">
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
             </div>
