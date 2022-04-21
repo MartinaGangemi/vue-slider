@@ -49,9 +49,16 @@ const app  = new Vue ({
             this.activeImage++
             if(this.activeImage === this.galleria.length){
                 this.activeImage = 0
+            
             }
+            
         },
 
+        selectImg(index){
+           this.activeImage = index
+           console.log("cannuccia")
+        },
+        
         
     }
    

@@ -19,9 +19,8 @@
                     <p>{{ galleria[activeImage].text}}</p>
                 </div>
             </div>
+            
             <div class="thumbnails">
-                <img :src="thumb.image"  class="thumb " :class="activeImage === index ? 'active' : ''" alt="" 
-                v-for ="(thumb, index) in galleria" >
                 <div class="navigator">
                     <div class="up" @click="prevImg">
                         <i class="fa-solid fa-chevron-up "></i>
@@ -30,6 +29,9 @@
                         <i class="fa-solid fa-chevron-down"></i>
                     </div>
                 </div>
+                <img :src="thumb.image"  class="thumb " :class="activeImage === index ? 'active' : ''" alt="" 
+                v-for ="(thumb, index) in galleria" @click="selectImg(index)" >
+                
             </div>
             
 
