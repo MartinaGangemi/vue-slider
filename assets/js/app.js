@@ -50,7 +50,6 @@ const app  = new Vue ({
             if(this.activeImage === this.galleria.length){
                 this.activeImage = 0
             }
-            
         }
     }
    
