@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="thumbnails">
-                <img :src="thumb.image"  class="thumb" alt="" v-for ="thumb in galleria" >
+                <img :src="thumb.image"  class="thumb " :class="activeImage === index ? 'active' : ''" alt="" v-for ="(thumb, index) in galleria" >
         
             </div>
              <div class="navigator">

@@ -32,6 +32,7 @@ h2 , p{
 
 .thumbnails>.thumb {
     height: calc(100% / 5);
+    opacity: 0.5;
 }
 
 .navigator{
@@ -58,3 +59,8 @@ h2 , p{
     cursor: pointer;
 }
 
+.active{
+    opacity: 1 !important; 
+    box-shadow: -1px 1px 5px 0px black;
+    
+}
