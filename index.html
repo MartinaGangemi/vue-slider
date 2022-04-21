@@ -11,22 +11,18 @@
 <body>
     <div id="app">
 
-        <!-- MILESTONE 1
-        Per prima cosa, creiamo il markup statico: costruiamo il container e inseriamo l'immagine grande a sinistra e le thumbnails sulla destra in modo da poter stilare lo slider; avremo così la struttura base e gli stili pronti per poterci poi concentrare solamente sull'aspetto logico.
-        -->
         <div class="container">
             <div class="img_container">
-                <img src="./assets/img/01.jpg" alt="">
-                <div class="text"></div>
+                <img :src="galleria[activeImage].image" alt="">
+                <div class="text">
+                    
+                </div>
             </div>
             <div class="thumbnails">
-                <img src="./assets/img/02.jpg" alt="">
-                <img src="./assets/img/03.jpg" alt="">
-                <img src="./assets/img/04.jpg" alt="">
-                <img src="./assets/img/05.jpg" alt="">
-                
+                <img :src="thumb"  class="thumb" alt="" v-for ="(thumb, index) in galleria[index].image" >
+        
             </div>
-            <div class="navigator">
+             <div class="navigator">
                 <div class="up">
                     <i class="fa-solid fa-chevron-up "></i>
                 </div>
@@ -39,7 +35,9 @@
 
     </div>
 
-    <script src="./assets/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+   
+    <script src="./assets/js/app.js"></script>
+   
 </body>
 </html>

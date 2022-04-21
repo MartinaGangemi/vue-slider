@@ -3,6 +3,7 @@
     height: 400px;
 }
 
+
 img{
     width: 100%;
     height: 100%;
@@ -13,19 +14,18 @@ img{
     flex-direction: column;
 }
 
-.thumbnails>img {
+.thumbnails>.thumb {
     height: calc(100% / 4);
 }
 
 .navigator{
     position: relative;
-    right: 233.5px;
+    right: 120px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
-    width: 233.5px;
     align-items: center;
     
 }
