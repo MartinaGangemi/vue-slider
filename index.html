@@ -20,17 +20,18 @@
                 </div>
             </div>
             <div class="thumbnails">
-                <img :src="thumb.image"  class="thumb " :class="activeImage === index ? 'active' : ''" alt="" v-for ="(thumb, index) in galleria" >
-        
-            </div>
-             <div class="navigator">
-                <div class="up" @click="prevImg">
-                    <i class="fa-solid fa-chevron-up "></i>
+                <img :src="thumb.image"  class="thumb " :class="activeImage === index ? 'active' : ''" alt="" 
+                v-for ="(thumb, index) in galleria" >
+                <div class="navigator">
+                    <div class="up" @click="prevImg">
+                        <i class="fa-solid fa-chevron-up "></i>
+                    </div>
+                    <div class="down" @click="nextImg">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
                 </div>
-                <div class="down" @click="nextImg">
-                    <i class="fa-solid fa-chevron-down"></i>
-                </div>
             </div>
+            
 
         </div>
 
